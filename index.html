@@ -17,7 +17,7 @@
         font-style: normal;
         display: block;
         margin: 0px;
-
+        font-size: 17px;
     }
 
     .titulo {
@@ -29,7 +29,11 @@
     }
 
     .cor{
-        border-left: gray 5px solid;
+        border-left: #9c9c9c 5px solid;
+    }
+
+    .texto{
+        color: #9c9c9c;
     }
     
     .borda{
@@ -40,20 +44,20 @@
         font-size: x-small;
     }
 
-    div {
+    .margem {
         margin-top: 0px;
         margin-bottom: 100px;
-        margin-right: 150px;
-        margin-left: 150px;
+        margin-right: 350px;
+        margin-left: 100px;
     }
 
     ul {
        list-style-type: none;
         margin-top: 0px;
         margin-bottom: 50px;
-        margin-right: 150px;
-        margin-left: 150px;
-       padding: 20px;
+        margin-right: 100px;
+        margin-left: 100px;
+       padding: 15px;
        overflow: hidden;
         background-color: #eaf7e7;
         border-left: 1px #3b8772 solid;
@@ -71,12 +75,66 @@
        display: block;
        color: #3b8772;
        text-align: center;
-       padding: 14px 16px;
+       padding: 16px 8px;
        text-decoration: none;
     }
 
     li a:hover {
         background-color: #c1e3d9;
+    }
+
+    a.one:link {color:#051812;}
+    a.one:visited {color:#051812;}
+    a.one:hover {color:#051812;}
+
+    .color{
+        color: #68a594;
+    }
+
+    .margin{
+        margin-left: 240px;
+    }
+
+    .fonte{
+      font-size: 14px;
+    }
+    
+    .posicao{
+      position: absolute;
+      top: 8px;
+      left: 110px;
+    }
+    
+    .position{
+      position: absolute;
+      top: 25px;
+      right: 110px;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .search-bar button {
+      padding: 5px 10px;
+      background-color: #008000;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
+
+    botao{
+        padding: 50px 100px;
+        border: none;
+        border-radius: 10px;
+        margin-left: 40px;
     }
 
 </style>
@@ -85,18 +143,28 @@
 
 
 <ul>
-  <li><a class="active" href="Ciências da natureza"><b>Ciências da natureza</b></a></li>
-  <li><a href="Ciências humanas"><b>Ciências humanas</b></a></li>
-  <li><a href="Linguagens e Artes"><b>Linguagens e Artes</b></a></li>
-  <li><a href="Matemática"><b>Matemática</b></a></li>
-  <li><a href="Mais"><b>Mais</b> ▼</a></li>
-
+    <div>
+      <div class="posicao">
+        <img src="images-removebg-preview.png" alt="imagem" height="60px" width="240px">
+      </div>  
+  <li><a class="active margin fonte" href="Ciências da natureza"><b>Ciências da natureza</b></a></li>
+  <li><a class="fonte" href="Ciências humanas"><b>Ciências humanas</b></a></li>
+  <li><a class="fonte" href="Linguagens e Artes"><b>Linguagens e Artes</b></a></li>
+  <li><a class="fonte" href="Matemática"><b>Matemática</b></a></li>
+  <li><a class="fonte" href="Mais"><b>Mais</b> ▼</a></li>
 </ul>
+        <div class="search-bar position">
+          <input type="text" placeholder="Buscar...">
+          <button type="submit">Buscar</button>
+        </div>
+    </div>
 
-<div>
+<div class="margem">
+
+<p><a class="one color">Exercícios </a>>></p>
+
 <h1 class="titulo">Exercícios de Trabalho</h1>
 
-    
 <p><b>Exercício 1:</b> (Enem 2014)</p>
 <p>Selecionamos as questõe dos vestibulares mais importantes do país para elaborar este banco de <b>exercícios de Trabalho.</b></p>
 
@@ -108,20 +176,24 @@
     <input type="radio" id="A" name="pergunta1" value="ideia de progresso.">
     <label for="ideia de progresso.">Ideia de progresso.</label><br>
 </br>
+</br>
 
     <label for="B">B)</label>
     <input type="radio" id="B" name="pergunta1" value="concentração do capital.">
     <label for="concentração do capital.">Concentração do capital.</label><br>
+</br>
 </br>
 
     <label for="C">C)</label>
     <input type="radio" id="C" name="pergunta1" value="noção de sustentabilidade.">
     <label for="noção de sustentabilidade.">Noção de sustentabilidade.</label></br>
 </br>
+</br>
 
     <label for="D">D)</label>
     <input type="radio" id="D" name="pergunta1" value="organização dos sindicatos.">
     <label for="organização dos sindicatos.">Organização dos sindicatos.</label></br>
+</br>
 </br>
 
     <label for="E">E)</label>
@@ -132,7 +204,7 @@
 <p><b>Exercício 2:</b> (Enem 2013)</p>
 
 <blockquote class="cor">
-    <p class="borda">Um trabalhador em tempo flexível controla o local do trabalho, mas não adquire maior controle sobre o processo em si. A essa altura, vários estudos sugerem que a supervisão do trabalho é muitas vezes maior para os ausentes do escritório do que para os presentes. O trabalho é fisicamente descentralizado e o poder sobre o trabalhador, mais direto.</p>
+    <p class="borda texto">Um trabalhador em tempo flexível controla o local do trabalho, mas não adquire maior controle sobre o processo em si. A essa altura, vários estudos sugerem que a supervisão do trabalho é muitas vezes maior para os ausentes do escritório do que para os presentes. O trabalho é fisicamente descentralizado e o poder sobre o trabalhador, mais direto.</p>
 </blockquote>
 
 <p class="final">SENNETT, R. A corrosão do caráter: consequências pessoais do novo capitalismo. Rio de Janeiro: Record, 1999 (adaptado).</p>
@@ -143,22 +215,25 @@
     <input type="radio" id="A" name="pergunta2" value="A">
     <label for="A">As tecnologias de informação sejam usadas para democratizar as relações laborais.</label><br>
 </br>
+</br>
 
     <label for="B">B)</label>
     <input type="radio" id="B" name="pergunta2" value="B">
     <label for="B">As estruturas burocráticas sejam transferidas da empresa para o espaço doméstico</label><br>
+</br>
 </br>
 
     <label for="C">C)</label>
     <input type="radio" id="C" name="pergunta2" value="C">
     <label for="C">Os procedimentos de terceirização sejam aprimorados pela qualificação profissional.</label></br>
 </br>
+</br>
 
     <label for="D">D)</label>
     <input type="radio" id="D" name="pergunta2" value="D">
     <label for="D">As organizações sindicais sejam fortalecidas com a valorização da especialização funcional.</label></br>
 </br>
-
+</br>
     <label for="E">E)</label>
     <input type="radio" id="E" name="pergunta2" value="E">
     <label for="E">Os mecanismos de controle sejam deslocados dos processos para os resultados do trabalho.</label>
@@ -179,20 +254,24 @@
 <input type="checkbox" id="1" name="pergunta3" value="1">
 <label for="1">Como consequência do fim do chamado "bloco socialista", os países capitalistas centrais vêm rebaixando brutalmente os direitos e as conquistas sociais dos trabalhadores, dada a "inexistência", segundo o capital, do "perigo socialista" hoje.</label><br>
 </br>
+</br>
 
 <label for="2">2)</label>
 <input type="checkbox" id="2" name="pergunta3" value="2">
 <label for="2">A partir dos anos 1970, o projeto neoliberal passou a ditar o ideário e o programa a serem implementados pelos países capitalistas, inicialmente no centro e logo depois nos países subordinados, contemplando reestruturação produtiva, privatização acelerada, enxugamento do Estado e políticas fiscais e monetárias.</label><br>
+</br>
 </br>
 
 <label for="3">4)</label>
 <input type="checkbox" id="4" name="pergunta3" value="4">
 <label for="4">É perceptível, particularmente nas últimas décadas do século XX, um significativo aumento do número de assalariados médios no setor primário da economia, que foram expulsos do mundo produtivo industrial, sobretudo nos chamados países do Eixo Norte.</label></br>
 </br>
+</br>
 
 <label for="8">8)</label>
 <input type="checkbox" id="8" name="pergunta3" value="8">
 <label for="8"></label>O trabalho passa a satisfazer as necessidades do trabalhador no momento em que ele se aliena da atividade produtiva.</br>
+</br>
 </br>
 
 </br>
@@ -208,26 +287,31 @@
 <input type="radio" id="A" name="pergunta4" value="A">
 <label for="A">Eliminação das vantagens locacionais e ampliação da legislação laboral.</label><br>
 </br>
+</br>
 
 <label for="B">B)</label>
 <input type="radio" id="B" name="pergunta4" value="B">
 <label for="B">Limitação dos fluxos logísticos e fortalecimento de associações sindicais.</label><br>
+</br>
 </br>
 
 <label for="C">C)</label>
 <input type="radio" id="C" name="pergunta4" value="C">
 <label for="C">Diminuição dos investimentos industriais e desvalorização dos postos qualificados.</label></br>
 </br>
+</br>
 
 <label for="D">D)</label>
 <input type="radio" id="D" name="pergunta4" value="D">
 <label for="D">Concentração das áreas manufatureiras e redução da jornada semanal.</label></br>
+</br>
 </br>
 
 <label for="E">E)</label>
 <input type="radio" id="E" name="pergunta4" value="E">
 <label for="E">Automatização dos processos fabris e aumento dos níveis de desemprego.</label>
 </br>
+
 
 </br>
 
@@ -242,24 +326,118 @@
 <input type="radio" id="A" name="pergunta5" value="A">
 <label for="A">Legitimar os protestos fabris.</label><br>
 </br>
+</br>
 
 <label for="B">B)</label>
 <input type="radio" id="B" name="pergunta5" value="B">
 <label for="B">Ordenar os conflitos laborais.</label><br>
+</br>
 </br>
 
 <label for="C">C)</label>
 <input type="radio" id="C" name="pergunta5" value="C">
 <label for="C">Oficializar os sindicatos plurais.</label></br>
 </br>
+</br>
 
 <label for="D">D)</label>
 <input type="radio" id="D" name="pergunta5" value="D">
 <label for="D">Assegurar os princípios liberais.</label></br>
+</br>
 </br>
 
 <label for="E">E)</label>
 <input type="radio" id="E" name="pergunta5" value="E">
 <label for="E">Unificar os salários profissionais.</label>
 </br>
+
+</br>
+
+<p><b>Exercício 6:</b> (Enem 2016)</p>
+<p>A mundialização introduz o aumento da produtividade do trabalho sem acumulação de capital, justamente pelo caráter divisível da forma técnica molecular-digital do que resulta a permanência da má distribuição da renda: exemplificando mais uma vez, os vendedores de refrigerantes às portas dos estádios viram sua produtividade aumentada graças ao just in time dos fabricantes e distribuidores de bebidas, mas para realizar o valor de tais mercadorias, a forma do trabalho dos vendedores é a mais primitiva. Combinam-se, pois, acumulação molecular-digital com o puro uso da força de trabalho.</p>
+
+<p class="tamanho">OLIVEIRA, F. Crítica à razão dualista e o ornitorrinco. Campinas: Boitempo, 2003.</p>
+
+<p>Os aspectos destacados no texto afetam diretamente questões como emprego e renda, sendo possível explicar essas transformações pelo(a):</p>
+
+<label for="A">A)</label>
+<input type="radio" id="A" name="pergunta6" value="A">
+<label for="A">Crise bancária e o fortalecimento do capital industrial.</label><br>
+</br>
+</br>
+
+<label for="B">B)</label>
+<input type="radio" id="B" name="pergunta6" value="B">
+<label for="B">Inovação toyotista e a regularização do trabalho formal.</label><br>
+</br>
+</br>
+
+<label for="C">C)</label>
+<input type="radio" id="C" name="pergunta6" value="C">
+<label for="C">Impacto da tecnologia e as modificações na estrutura produtiva.</label></br>
+</br>
+</br>
+
+<label for="D">D)</label>
+<input type="radio" id="D" name="pergunta6" value="D">
+<label for="D">Emergência da globalização e a expansão do setor secundário.</label></br>
+</br>
+</br>
+
+<label for="E">E)</label>
+<input type="radio" id="E" name="pergunta6" value="E">
+<label for="E">Diminuição do tempo de trabalho e a necessidade de diploma superior.</label>
+</br>
+
+</br>
+
+<p><b>Exercício 7:</b> (UDESC 2020/1)</p>
+<p>A expansão das multinacionais pelo mundo, decorrente da expansão do capitalismo, produziu mudanças significativas nas relações econômicas e comerciais entre os países, alterando a participação deles na Divisão Internacional do Trabalho (DIT).</p>
+
+<p>Analise as proposições sobre a expansão das multinacionais e a Divisão Internacional do Trabalho (DIT).</p>
+
+<p>I. As multinacionais que se instalam nos países menos desenvolvidos atuam em setores tradicionais, como informática, microeletrônica, biotecnologia e aero espacial.</p>
+
+<p>II. Até aproximadamente meados do século passado, a produção industrial concentrava-se em um número restrito de países, entre eles Estados Unidos, Reino Unido, Alemanha e Japão. Grande parte desta produção industrial destinava-se ao abastecimento do mercado interno, e o restante era exportado para os países menos industrializados e de economia primária.</p>
+
+<p>III. Com a expansão das multinacionais, a partir da segunda metade do século XX, muitas empresas se instalaram em países de economia, essencialmente, industrial, como Brasil, Argentina, México, África do Sul e Índia.</p>
+
+<p>IV. A DIT representa a especialização produtiva de cada país na economia e no comércio internacional, ou seja, como cada país está inserido, internacionalmente, na produção e na comercialização de produtos e mercadorias.</p>
+
+<p>Assinale a alternativa correta.</p>
+
+<label for="A">A)</label>
+<input type="radio" id="A" name="pergunta6" value="A">
+<label for="A">Somente as afirmativas I e II são verdadeiras.</label><br>
+</br>
+</br>
+
+<label for="B">B)</label>
+<input type="radio" id="B" name="pergunta6" value="B">
+<label for="B">Somente as afirmativas II e III são verdadeiras.</label><br>
+</br>
+</br>
+
+<label for="C">C)</label>
+<input type="radio" id="C" name="pergunta6" value="C">
+<label for="C">Somente as afirmativas II e IV são verdadeiras.</label></br>
+</br>
+</br>
+
+<label for="D">D)</label>
+<input type="radio" id="D" name="pergunta6" value="D">
+<label for="D">Somente as afirmativas I e IV são verdadeiras.</label></br>
+</br>
+</br>
+
+<label for="E">E)</label>
+<input type="radio" id="E" name="pergunta6" value="E">
+<label for="E">Somente as afirmativas I e III são verdadeiras.</label>
+</br>
+</br>
+
+    <div class="botao">
+        <input type="submit" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+    </div>
 </div>
